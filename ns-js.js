@@ -5,11 +5,13 @@ var _namespace = (function(global) {
     }
         
     return function(ns, base) {
-        var objs = ns.split('.');
+        var ns_split;
+        if (typeof ns !== 'string') { throw "_namespace :: invalid argument not a string value"; }
         if (typeof base === 'undefined') { base = global; }
+        ns_split = ns.split('.');
 
-        for (var i = 0, j = objs.length; i < j; i++) {
-            base = _add(objs[i], base);
+        for (var i = 0, j = ns_split.length; i < j; i++) {
+            base = _add(ns_split[i], base);
         }
     }
 
