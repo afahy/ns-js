@@ -9,10 +9,11 @@ The `_namespace` function should create a namespaced object if it does not alrea
 
 `_namespace(String Namespace [, Object Base])`
 
-    _namespace('foo.bar');
-    // > foo.bar
+```js
+_namespace('foo.bar');
+// > foo.bar
 
-    _namespace('baz', foo.bar);
-    // > foo.bar.baz
-
+_namespace('baz', foo.bar);
+// > foo.bar.baz
+```
 ## ##
