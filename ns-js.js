@@ -1,9 +1,15 @@
 var _namespace = (function(global) {
-    var _add = function(next, obj) {
-        if (obj[next]) { return obj[next]; }
-        return obj[next] = {};
+    function _add(obj, base) {
+        return base[obj] || (base[obj] = {});
     }
-        
+    function _override(obj, base) {
+        for (data in obj) {
+            if (obj.hasOwnProperty(data)) {
+                base[data] = obj[data];
+            }
+        }
+    }
+
     return function(ns, base) {
         var ns_split;
         if (typeof ns !== 'string') { throw "_namespace :: invalid argument not a string value"; }
