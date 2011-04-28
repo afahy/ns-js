@@ -1,6 +1,6 @@
 # ns-js :: A basic routine for JavaScript namespace declaration #
 
-## `_namespace` ##
+## _namespace ##
 
 The `_namespace` function should create a namespaced object if it does not already exist
 
@@ -18,7 +18,7 @@ _namespace('foo.bar');
 _namespace('baz', foo.bar);
 // > foo.bar.baz
 ```
-## `_package` ##
+## _package ##
 
 The `_package` function should create or navigate a namespace and attach an object (package) at its terminus.
 
